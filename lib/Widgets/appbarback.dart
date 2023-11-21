@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 
-PreferredSizeWidget? appUser(BuildContext context,backgcolor,final  List<Widget> actions){
+PreferredSizeWidget? appUser(BuildContext context,backgcolor){
 
   return AppBar(
 
