@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:new_one/Widgets/buttons.dart';
+import 'package:get/get.dart';
+import 'package:new_one/AppColors/AllColors.dart';
 import 'package:new_one/createaccount.dart';
-import 'package:new_one/second_page.dart';
-import 'package:new_one/verification.dart';
+
+
+import 'AppUtils/Utils.dart';
+
 
 class home_screen extends StatelessWidget {
   const home_screen({Key? key}) : super(key: key);
@@ -49,8 +52,9 @@ class home_screen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    buttonuser(context, 'Sign In', () => SecondScreen()),
-                   buttonuser(context, 'Create Account', () => create_account())
+                   buttonuser('Sign In', (signin)),
+                  buttonuser( 'Create Account', (signup))
+
                   ],
                 ),
               ],

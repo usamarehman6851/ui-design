@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:new_one/Widgets/appbarback.dart';
-import 'package:new_one/Widgets/buttons.dart';
-import 'package:new_one/Widgets/textform.dart';
-import 'package:new_one/Widgets/textwidget.dart';
-import 'package:new_one/verification.dart';
+import 'package:get/get.dart';
+import 'package:new_one/AppColors/AllColors.dart';
+
+
+import 'AppUtils/Utils.dart';
 
 class numberVerify extends StatelessWidget {
   const numberVerify({super.key});
@@ -12,18 +12,18 @@ class numberVerify extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-     appBar: appUser(context, Colors.white),
+     appBar: appUser( whiteColor),
       body:  Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           text_one('Created Account', TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
+            fontWeight: xBold,
+            fontSize: headingFontSize,
             color: Colors.black,
           )),
          inputdata('Phone Number', Icon(Icons.phone)),
           Spacer(),
-          buttonuser(context, 'Get Otp', () => OTPScreen())
+        buttonuser( 'Get Otp', (otp))
 
         ],
       ),

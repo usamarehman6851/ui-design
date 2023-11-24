@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:new_one/Widgets/appbarback.dart';
-import 'package:new_one/Widgets/buttons.dart';
-import 'package:new_one/Widgets/textform.dart';
-import 'package:new_one/Widgets/textwidget.dart';
-import 'package:new_one/mainHomepage.dart';
+import 'package:get/get.dart';
+import 'package:new_one/AppColors/AllColors.dart';
 
-import 'package:new_one/verification.dart';
+
+import 'AppUtils/Utils.dart';
+
 
 
 class SecondScreen extends StatefulWidget {
@@ -19,15 +18,15 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appUser(context,Colors.white),
+      appBar: appUser(whiteColor),
 
       
       body:  Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
        text_one('Welcome Back', TextStyle(color: Colors.black,
-         fontWeight: FontWeight.bold,
-         fontSize: 22,)),
+         fontWeight: xBold,
+         fontSize: headingFontSize)),
        const   SizedBox(
             height: 8,
           ),
@@ -39,7 +38,7 @@ class _SecondScreenState extends State<SecondScreen> {
         inputdata('Passwored', Icon(Icons.password_outlined)),
 
 
-        buttonuser(context, 'Sign In', () => mainHomepage())
+      buttonuser( 'Sign In',  (mainhome))
         ],
       ),
     );

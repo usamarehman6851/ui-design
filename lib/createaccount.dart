@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:new_one/Widgets/appbarback.dart';
-import 'package:new_one/Widgets/buttons.dart';
-import 'package:new_one/Widgets/stackAppbar.dart';
-import 'package:new_one/Widgets/textform.dart';
-import 'package:new_one/Widgets/textwidget.dart';
-import 'package:new_one/numberVerify.dart';
+import 'package:get/get.dart';
+import 'package:new_one/AppColors/AllColors.dart';
+import 'AppUtils/Utils.dart';
+
 
 
 class create_account extends StatefulWidget {
@@ -19,21 +17,22 @@ class _create_accountState extends State<create_account> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: appUser(context, Colors.blue.shade900),
+        appBar: appUser( blueColor900,
+        ),
 
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            stackAppbar(),
-           text_one('Created Account', TextStyle(color: Colors.black,
-               fontWeight: FontWeight.bold,
-               fontSize: 22)),
+            stackAppbar(blueColor900),
+           text_one('Created Account', TextStyle(color: blackColor,
+               fontWeight: xBold,
+               fontSize: headingFontSize)),
             inputdata('Your Name',Icon(Icons.sort_by_alpha)),
             inputdata('Job Title', Icon(Icons.shopping_bag_outlined)),
             inputdata('Your Email', Icon(Icons.email_outlined)),
             Spacer(),
-            buttonuser(context, 'Continue', () => numberVerify())
+           buttonuser( 'Continue', (verify))
 
 
           ],

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:new_one/Widgets/appbarback.dart';
-import 'package:new_one/Widgets/buttons.dart';
+import 'package:new_one/AppColors/AllColors.dart';
 import 'package:new_one/mainHomepage.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+
+import 'AppUtils/Utils.dart';
 
 
 
@@ -27,13 +28,8 @@ class _OTPScreenState extends State<OTPScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appUser(context,Colors.white),
-      body:
-
-
-
-
-      Column(
+      appBar: appUser(whiteColor),
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -69,9 +65,9 @@ class _OTPScreenState extends State<OTPScreen> {
                 borderRadius: BorderRadius.circular(10),
                 fieldHeight: 50,
                 fieldWidth: 65,
-                activeColor: Colors.black,
+                activeColor: blackColor,
                 inactiveColor: Colors.grey,
-                selectedColor: Colors.black,
+                selectedColor: blackColor,
               ),
             ),
           ),
@@ -121,7 +117,7 @@ class _OTPScreenState extends State<OTPScreen> {
                   // Display an error or prompt the user to enter a valid OTP
                 }
               },
-              child: buttonuser(context, 'Submit Otp', () => mainHomepage())
+              child: buttonuser( 'Submit Otp',  mainhome)
 
               ),
             ),

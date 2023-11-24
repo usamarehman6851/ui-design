@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:new_one/Widgets/appbarback.dart';
-import 'package:new_one/Widgets/container.dart';
-import 'package:new_one/Widgets/sixAvatar.dart';
-import 'package:new_one/Widgets/swipeContainer.dart';
+
+
+import 'AppUtils/Utils.dart';
+
 
 class mainHomepage extends StatelessWidget {
   const mainHomepage({super.key});
@@ -27,7 +27,6 @@ class mainHomepage extends StatelessWidget {
 
           ),
       body: ContainerWidget(),
-
     );
 
 
